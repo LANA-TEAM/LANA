@@ -1,8 +1,8 @@
 #!/bin/bash
 cd $(cd $(dirname $0); pwd)
 echo -e '\e[1m\e[31m
-يتم تنصيب سورس لانا الان, 
-برجاء الانتظار حتي يتم انتهاء التنصيب
+TEAMLANA source is being installed, 
+Please wait until the installation is complete
 \033[0m'
 echo -e '\033[0;33m
 If it is the first time to install the source, send the number » {1}
@@ -13,7 +13,7 @@ or اذا سبق ونصبت السورس ارسل رقم » {2}
 read Install
 case $Install in
 1)
-echo -e '\033[0;33mيتم تنصيب مكاتب سورس لانا الان'
+echo -e '\033[0;33mOffice installation has begun'
 sleep 2
 sudo apt update
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test
@@ -42,13 +42,6 @@ cd luarocks-3.3.0
 sudo luarocks install luarocks
 sudo luarocks install luasec
 sudo luarocks install luasocket
-apt install python3
-apt install python3-pip
-pip3 install yt-dlp
-pip3 install ffmpeg 
-apt install ffmpeg 
-apt install gnome-calculator
-pip3 install gtts
 cd ../..
 rm -rf tmp
 unzip luatele.zip
